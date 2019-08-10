@@ -1,32 +1,21 @@
 import React from 'react';
-import Modal from 'react-modal'
+import { ModalContainer, ModalContent } from './modal.styles'
 
 
-const ModalWindow = ({ isOpened, closeModal }) => {
+const Modal = ({children, isOpened, style }) => {
 
-    const styles = {
-        content : {
-            top                   : '50%',
-            left                  : '50%',
-            right                 : 'auto',
-            bottom                : 'auto',
-            marginRight           : '-50%',
-            transform             : 'translate(-50%, -50%)'
-          }
+    if (isOpened) {
+        return (
+            <ModalContainer style={style}  >
+                <ModalContent>
+                    {children}
+                </ModalContent>
+            </ModalContainer>
+        )
     }
- 
-    return (
-        <Modal
-                isOpen={isOpened}
-                onRequestClose={closeModal}
-                style={styles}
-                contentLabel="Example Modal"
-                ariaHideApp={false}
-            >
-    
-                <h2>Fuck this shit</h2>
-                
-        </Modal>
-)}
 
-export default ModalWindow
+    return null
+    
+}
+
+export default Modal
