@@ -8,3 +8,7 @@
   width: 150px;
   margin: 100px auto;
 }
+
+* {
+  box-sizing: border-box;
+}

@@ -33,10 +33,9 @@ class App extends React.Component {
         <CustomInput type="password" label="address" value={this.address} onChange={this.handleOnChange} style={{margin: '0 auto'}} />
         
         <Modal style={{ margin: '0px auto'}} isOpened={this.state.isOpened}>
-          <h1>Modal!</h1>
-          <hr />
-          <h2>This is fantastic!</h2>
-          <p>I think this will be a success!</p>
+         <Modal.Header>Header</Modal.Header>
+         <Modal.Body>Body</Modal.Body>
+         <Modal.Footer>Footer</Modal.Footer>
         </Modal>
       </div>
     );
